@@ -1,0 +1,1231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>--- myMiniByteCalc ---</title>
+<style type="text/css">
+<!--
+.leftTopTableTopCell {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	height: 5px;
+	border-top-width: thin;
+	border-right-width: medium;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+.leftTopTableBottomCell {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	height: 5px;
+	border-top-width: thin;
+	border-right-width: medium;
+	border-bottom-width: thin;
+	border-left-width: medium;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	background-color: #CCCCCC;
+}
+
+.leftTableCell {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	background-color: #CCCCCC;
+}
+.rightTableCell {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	background-color: #CCCCCC;
+}
+.rightTopTableTopCell {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	height: 5px;
+	border-top-width: thin;
+	border-right-width: medium;
+	border-bottom-width: thin;
+	border-left-width: medium;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+.rightTopTableBottomCell {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 5px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	height: 5px;
+	border-top-width: thin;
+	border-right-width: medium;
+	border-bottom-width: thin;
+	border-left-width: medium;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	background-color: #CCCCCC;
+}
+.bottomTableCell {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	background-color: #CCCCCC;
+}
+.headerTableCell {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: thick;
+	border-left-width: medium;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #333333;
+	padding: 5px;
+	background-color: #CCCCCC;
+}
+.boxBorder {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	background-color: #CCCCCC;
+	border-top-width: thick;
+	border-right-width: thick;
+	border-bottom-width: thick;
+	border-left-width: thick;
+	border-top-style: double;
+	border-right-style: double;
+	border-bottom-style: double;
+	border-left-style: double;
+	border-top-color: #999999;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #999999;
+	text-align: center;
+}
+.resultsStyle {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	padding: 5px;
+	background-color: #00CC99;
+}
+.hide {
+	display: none;
+	visibility: hidden;
+}
+.show {
+	display: inline;
+	visibility: visible;
+}
+#calcBytesContainer {
+	overflow: hidden;
+	position: relative;
+	visibility: visible;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+}
+a.headerStyle:link {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	background-color: #999999;
+	border: thin solid #FFFFFF;
+}
+a.headerStyle:visited {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	background-color: #999999;
+	border: thin solid #FFFFFF;
+}
+a.headerStyle:hover {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #666666;
+	border: thin solid #FFFFFF;
+}
+a.headerStyle:active {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color: #666666;
+	border: thin solid #FFFFFF;
+}
+body {
+	background-color: #99CCCC;
+}
+#neck {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: underline;
+	background-color: #CCCCCC;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	width: 5ex;
+	text-align: center;
+}
+.botBorder {
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+-->
+</style>
+
+<script language="javascript">
+
+//* myMiniByteCalculator Arrays
+var curValList = new Array(); // record of all values submitted in Bytes
+var curValListView = new Array(); // record of text/options displayed in current values select object
+var curValOperation = new Array(); // record of arithmatic operations performed
+var prevResults = new Array(); // record of previous totals/results
+var multiplierValuesList = new Array(); // record of Byte multipliers used
+var inputValuesList = new Array(); // record of all values submitted in raw form
+var convResultList = new Array();// record of byteConvertet converted results which are displayed in the select box
+var visibilityStatus = new Array(); // record of objects that are to be hidden then displayed. objects that start out hiddem must be added to Array
+	visibilityStatus['convBytesContainer'] = "hide";
+	visibilityStatus['calcBytesContainer'] = "hide";
+	visibilityStatus['calcBytesEdit'] = "hide";
+	visibilityStatus['cancelCalcEdit'] = "hide";
+
+
+
+
+//*******************************************************************************************************************************//
+//  _____    _____    _____        _____    ,        _____    _____     _____    ,            ,   ,    _____    _____    *******//   
+//  |____    |   |    |___/        | __     |        |   |    |___/     |___|    |            |   |    |____    |___     ******//
+//  |        |___|    |  \         |___\    |____    |___|    |___\     |   |    |____        |___|    _____|   |____    *****//
+//***************************************************************************************************************************//
+//**************************************************************************************************************************//
+//** These are global *****************************************************************************************************//
+
+
+
+
+//* This is old and should be updated.
+var NS4DOM = (document.layers) ? true:false;
+var IEDOM = (document.all) ? true:false;
+var W3CDOM = (document.getElementById) ? true:false;
+
+//* This is old and should be updated. Decides which method to use to "get" objects on the page.
+function getObject(id) {
+	if (W3CDOM) ref="document.getElementById('"+id+"')";
+	else if (NS4DOM) ref="document."+id;
+	else if (IEDOM) ref=id;
+	var object=eval(ref);
+	return object;
+}
+
+function getSrc(e) {
+	var srcObject;
+	if (!e) var e = window.event;
+	if (e.target) srcObject = e.target;
+	else if (e.srcElement) srcObject = e.srcElement;
+	if (srcObject.nodeType == 3) // defeat Safari bug
+		srcObject = srcObject.parentNode;		
+		
+		return srcObject.id;
+}
+
+function preventbubble(e){
+ if (e && e.stopPropagation) { //if stopPropagation method supported
+  e.stopPropagation()
+ }else event.cancelBubble=true
+}
+
+function assignEvents() {
+//document.onkeypress = preventbubble;
+getObject("byteInput").onkeypress = checkForEvent;
+getObject("convInput").onkeypress = checkForEvent;
+getObject("convBitInput").onkeypress = checkForEvent;
+getObject("convByteInput").onkeypress = checkForEvent;
+getObject("convKiloByteInput").onkeypress = checkForEvent;
+getObject("convMegaByteInput").onkeypress = checkForEvent;
+getObject("convGigaByteInput").onkeypress = checkForEvent;
+getObject("convTeraByteInput").onkeypress = checkForEvent;
+}
+
+function checkForEvent(e) {
+
+var e = window.event || e;
+
+//var myObject = getObject(thisObject);
+var thisKey = e.charCode || e.keyCode;
+var keyCharVal = String.fromCharCode(thisKey);
+//alert("-"+thisKey+"-");
+var permissionGranted;
+
+
+	switch(getSrc().toString()) {	
+		case "byteInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false; 
+			else if(thisKey == 13) permissionGranted = useByteConv("calc");
+			preventbubble();
+		break;
+		case "convInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false; 
+			else if(thisKey == 13) permissionGranted = useByteConv("convertTop");			
+			preventbubble();
+		break;
+		case "convBitInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false; 
+			else if(thisKey == 13) permissionGranted = useByteConv("convertTop");
+			preventbubble();
+		break;
+		case "convByteInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false; 
+			else if(thisKey == 13) permissionGranted = useByteConv("convertTop");
+			preventbubble();
+		break;
+		case "convKiloByteInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false;
+			else if(thisKey == 13) permissionGranted = useByteConv("convertTop");
+			preventbubble();
+		break;
+		case "convMegaByteInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false; 
+			else if(thisKey == 13) permissionGranted = useByteConv("convertTop");
+			preventbubble();
+		break;
+		case "convGigaByteInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false;
+			else if(thisKey == 13) permissionGranted = useByteConv("convertTop");
+			preventbubble();
+		break;
+		case "convTeraByteInput":
+			if(!isFinite(keyCharVal) && keyCharVal != ".") permissionGranted = false; 
+			else if(thisKey == 13) permissionGranted = useByteConv("convertTop");
+			preventbubble();
+		break;		
+	}
+	return permissionGranted;
+
+}
+
+//* This displays the results and operations made on the fly in a options list
+function createOptionsList(myArrayArg,thisObject) {
+var newOption;
+var myArray = eval(myArrayArg);
+	for(i=0;i<myArray.length;i++) {
+		if(!getObject(thisObject).options[i]) {
+			newOption = document.createElement('option');
+			newOption.text = myArray[i];
+			getObject(thisObject).add(newOption,null);	
+			getObject(thisObject).size = myArray.length;			
+		}
+	}
+}
+
+//* This returns the index number from a variable in a Array using its value compared to text values stored in a options list.
+function getIndexNum(arrayValue,indexObject) {
+var thisIndex;
+	indexNumLoop:
+	
+		for(n=0;n<getObject(indexObject).length;n++) {
+			if(getObject(indexObject).options[n].text.toLowerCase() == arrayValue.toLowerCase()) {
+				thisIndex = n;
+				break indexNumLoop;
+			}
+		}	
+		
+		return thisIndex;
+}
+
+//* This test text fields for numeric and null input, and options selected
+function testData(thisData, testType) {
+var dataResult;
+	switch (testType){
+			case "dataEmpty": 
+				dataResult = (getObject(thisData).value) ? true:false;	
+			break;
+			case "dataNum": 
+				dataResult = (Math.abs(getObject(thisData).value)) ? true:false;	
+			break;
+			case "dataSelected":
+				dataResult = (getObject(thisData).selectedIndex > -1) ? true:false;
+			default: false;
+			
+	}return dataResult;
+}
+
+//* This returns the bytes it takes as a parameter and converts it accordingly while adding the appropriate byte prefix
+function funnelBytes(rawBytes) {
+var newValue;
+	if(Math.abs(rawBytes) >= Math.pow(1024,9)) {
+		newValue = rawBytes / Math.pow(1024,9) + " BrontoBytes";
+	}else if(Math.abs(rawBytes) >= Math.pow(1024,8)) {
+		newValue = rawBytes / Math.pow(1024,8) + " YottaBytes";
+	}else if(Math.abs(rawBytes) >= Math.pow(1024,7)) {
+		newValue = rawBytes / Math.pow(1024,7) + " ZettaBytes";
+	}else if(Math.abs(rawBytes) >= Math.pow(1024,6)) {
+		newValue = rawBytes / Math.pow(1024,6) + " ExaBytes";
+	}else if(Math.abs(rawBytes) >= Math.pow(1024,5)) {
+		newValue = rawBytes / Math.pow(1024,5) + " PetaBytes";
+	}else if(Math.abs(rawBytes) >= Math.pow(1024,4)) {
+		newValue = rawBytes / Math.pow(1024,4) + " TeraBytes";
+	}else if(Math.abs(rawBytes) >= Math.pow(1024,3)) {
+		newValue = rawBytes / Math.pow(1024,3) + " GigaBytes";
+	}else if(Math.abs(rawBytes) >= Math.pow(1024,2)) {
+		newValue = rawBytes / Math.pow(1024,2) + " MegaBytes";
+	}else if(Math.abs(rawBytes) >= 1024) {
+		newValue = rawBytes / 1024 + " KiloBytes";
+	}else if(Math.abs(rawBytes) >= 1) {
+		newValue = rawBytes + " Bytes";
+	}else if(Math.abs(rawBytes) < 1) {
+		newValue = rawBytes * 8 + " Bits";
+	}else newValue = 0 + " Bits";
+	return newValue;
+}
+
+function roundFunnelBytes(rawBytes) {
+var newValue;
+	if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,9)) {
+		newValue = (rawBytes / Math.pow(1024,9)).toLocaleString() + " BrontoBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,8)) {
+		newValue = (rawBytes / Math.pow(1024,8)).toLocaleString() + " YottaBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,7)) {
+		newValue = (rawBytes / Math.pow(1024,7)).toLocaleString() + " ZettaBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,6)) {
+		newValue = (rawBytes / Math.pow(1024,6)).toLocaleString() + " ExaBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,5)) {
+		newValue = (rawBytes / Math.pow(1024,5)).toLocaleString() + " PetaBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,4)) {
+		newValue = (rawBytes / Math.pow(1024,4)).toLocaleString() + " TeraBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,3)) {
+		newValue = (rawBytes / Math.pow(1024,3)).toLocaleString() + " GigaBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= Math.pow(1024,2)) {
+		newValue = (rawBytes / Math.pow(1024,2)).toLocaleString() + " MegaBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= 1024) {
+		newValue = (rawBytes / 1024).toLocaleString() + " KiloBytes";
+	}else if(Math.round(Math.abs(rawBytes)) >= 1) {
+		newValue = rawBytes.toLocaleString() + " Bytes";
+	}else if(Math.round(Math.abs(rawBytes)) < 1) {
+		newValue = (rawBytes * 8).toLocaleString() + " Bits";
+	}else newValue = 0 + " Bits";
+	return newValue;
+}
+
+//* This sets the class of an object to show or hide it.
+function magician(thisObject) {
+var objectRef = getObject(thisObject);
+	if(!visibilityStatus[thisObject]) {
+		visibilityStatus.push(thisObject);
+		visibilityStatus[thisObject] = "show";
+	}
+	
+	switch(visibilityStatus[thisObject]) {
+		case "show":
+			objectRef.className = "hide";
+			visibilityStatus[thisObject] = "hide";
+		break;
+		case "hide":
+			objectRef.className = "show";
+			visibilityStatus[thisObject] = "show";
+		break;
+	}
+}
+
+//* This converts input values to Bytes
+function convertToBt(byteDivider,thisValue) {
+var newValue;
+	switch (byteDivider){
+		case "bt": 
+			var newValue = thisValue / 8;	
+		break;
+		case "Bt":
+			var newValue = thisValue;
+		break;
+		case "Kb": 
+			var newValue = thisValue * 1024;	
+		break;
+		case "Mb":
+			var newValue = thisValue * Math.pow(1024,2);
+		break;
+		case "Gb": 
+			var newValue = thisValue * Math.pow(1024,3);	
+		break;
+		case "Tb":
+			var newValue = thisValue * Math.pow(1024,4);	
+		break;
+		default: alert("Error: The specified multiplier is not valid. Please try again or contact support.");
+	}
+	return newValue;
+}
+
+//* This converts input values of Bytes to bits
+function convertTobt(thisValue) {
+ var newValue = thisValue * 8;
+ return newValue;
+}
+
+//* This converts input values of Bytes to Kilobytes
+function convertToKb(thisValue) {
+ var newValue = thisValue / 1024;
+ return newValue;
+}
+
+//* This converts input values of Bytes to Megabytes
+function convertToMb(thisValue) {
+ var newValue = thisValue / Math.pow(1024,2);
+ return newValue;
+}
+
+//* This converts input values of Bytes to Gigabytes
+function convertToGb(thisValue) {
+ var newValue = thisValue / Math.pow(1024,3);
+ return newValue;
+}
+
+//* This converts input values of Bytes to Terabytes
+function convertToTb(thisValue) {
+ var newValue = thisValue / Math.pow(1024,4);
+ return newValue;
+}
+
+//*********************************************************************************************************************//
+//  _____    _____    _____        _____    ,    ,    _____    _____        _____    _____    ,        _____   *******//   
+//  |____    |   |    |___/        |___/    \___/       |      |___         /        |___|    |        /       ******//
+//  |        |___|    |  \         |___\      |         |      |____        \____    |   |    |____    \____   *****//
+//*****************************************************************************************************************//
+//****************************************************************************************************************//
+//** These are exclusive to the byte calculator *****************************************************************//
+
+
+//* This uses an array of all values inputed to perform/decide calculation. Also stores the values of the current total in an array
+function calcTheDamValuesAlready(editMode) {
+	var finalResult=0;
+	var i=0;
+	
+	calcLoop:
+		while (curValList[i]) {
+			if(curValOperation[i] == "addBytes") {
+				finalResult += eval(curValList[i]);
+			}else if(curValOperation[i] == "subtractBytes") {
+				finalResult -= eval(curValList[i]);
+			}
+				if (editMode && i==prevResults.length){ 
+					break calcLoop;
+				}
+		i++;		
+		}			
+		
+		prevResults.push(finalResult);
+	return finalResult;
+}
+//******************************************************************************** delete below
+//*This displays the results and operations made on the fly in a options list
+function updateCurValList() {
+var newOption;
+	for(i=0;i<curValList.length;i++) {
+		if(!getObject("currentValues").options[i]) {
+			newOption = document.createElement('option');//,i
+			newOption.text = curValListView[i];//[i]
+			getObject("currentValues").add(newOption,null);//	
+			getObject("currentValues").size = curValListView.length;			
+		}
+	}
+}
+
+
+//* This displays the results
+function displayResults(tool) {
+	switch (tool){
+		case "calc": 
+				/*getObject("convertedResult").innerHTML = calcTheDamValuesAlready();	*/	
+				useByteConv(tool);
+		break;
+		case "convert": 
+			var thisValue = getObject("byteInput").value;
+		break;
+	}
+}
+//******************************************************************************** delete above
+
+function useByteCalc() {
+	if(testData("byteInput", "dataNum") == true && testData("byteInput", "dataEmpty") == true) {
+		
+			var thisValue = getObject("byteInput").value;
+			var newByteValue = convertToBt(getObject("byteMultiplyer").value,thisValue);
+			
+				multiplierValuesList.push(getObject("byteMultiplyer").options[getObject("byteMultiplyer").selectedIndex].text);			
+				inputValuesList.push(thisValue);
+				curValList.push(newByteValue);
+				curValOperation.push(getObject("byteOperation").value);
+				
+				calcTheDamValuesAlready();
+				curValListView.push(getObject("byteOperation").options[getObject("byteOperation").selectedIndex].text + " " + thisValue + " " + getObject("byteMultiplyer").options[getObject("byteMultiplyer").selectedIndex].text + " = " + funnelBytes(prevResults[prevResults.length-1]))/*prevResults[prevResults.length-1] + " Bytes")*/;
+				createOptionsList("curValListView","currentValues");//updateCurValList(); 
+				
+						if(curValList.length > 0) {
+								var nonNum = /\s/;
+												var returnValue = funnelBytes(prevResults[prevResults.length-1]);
+												var getIndex = returnValue.substring(returnValue.search(nonNum)+1,returnValue.length);
+												var finalVal = returnValue.substring(0,returnValue.search(nonNum));		
+												getObject("resultMultiplyer").selectedIndex = getIndexNum(getIndex,"resultMultiplyer");				
+						}else getObject("convertedResult").innerHTML = ":o) elielC<font color='#cccccc' size='smaller'>reative</font>T<font color='#cccccc' size='smaller'>hreat</font>";
+				
+				getObject("convertedResult").innerHTML = finalVal;
+				getObject("test0").innerHTML = curValListView;
+				getObject("test2").innerHTML = curValOperation;
+				getObject("test4").innerHTML = curValList;
+				getObject("test6").innerHTML = prevResults;
+		
+	}else alert("Please enter a numerical value!");
+}
+
+
+function deleteValue() {
+	if(testData("currentValues", "dataSelected") == false) {//This is used to make sure an option to delete is selected to avoid errors
+		alert("Please select an option to delete first!");
+	}else {
+		var confirmDelete = confirm("Are you sure you want to delete this value? \n" + getObject("currentValues").options[getObject("currentValues").selectedIndex].text);
+		var arrayIndexNum = getObject("currentValues").selectedIndex;
+		
+			if(confirmDelete == true) {
+				curValList.splice(arrayIndexNum,1);
+				curValListView.splice(0,curValListView.length);
+				curValOperation.splice(arrayIndexNum,1);		
+				prevResults.splice(arrayIndexNum,(prevResults.length - arrayIndexNum + 1));//
+				multiplierValuesList.splice(arrayIndexNum,1);
+				inputValuesList.splice(arrayIndexNum,1);
+				
+				for(var j=getObject("currentValues").length-1;j>=0;j--) {
+							getObject("currentValues").remove(j);
+				}
+				
+				displayResults("calc");
+				
+				for(i=0;i<curValList.length;i++) {
+					curValListView.push(curValOperation[i].substring(0,curValOperation[i].indexOf('Bytes',0)) + " " + inputValuesList[i] + " " + multiplierValuesList[i] + " = " + funnelBytes(prevResults[i]))/*prevResults[i] + " Bytes")*/;
+				}
+				
+				createOptionsList("curValListView","currentValues");
+				
+					getObject("test1").innerHTML = curValListView;
+					getObject("test3").innerHTML = curValOperation;
+					getObject("test5").innerHTML = curValList;
+					getObject("test7").innerHTML = prevResults;
+			}else alert("Nothing was deleted!");
+	}
+}
+
+function editMode() {
+	if(testData("currentValues", "dataSelected") == false) {//This is used to make sure an option to delete is selected to avoid errors
+		alert("Please select an option to edit first!");
+	}else { //Swap buttons around for editMode
+			magician("calcBytes");
+			magician("calcBytesEdit");
+			magician("clearCalcBytes");
+			magician("cancelCalcEdit");
+			//getObject("calcBytes").className = "hide";
+			//getObject("calcBytesEdit").className = "show";
+			//getObject("clearCalcBytes").className = "hide";
+			//getObject("cancelCalcEdit").className = "show";			
+			
+			var thisIndex = Math.abs(getObject("currentValues").selectedIndex);
+			var arithmaticOp = curValOperation[thisIndex].substring(0,curValOperation[thisIndex].indexOf('Bytes',0))
+			
+			getObject("byteInput").value = inputValuesList[thisIndex];
+			getObject("byteMultiplyer").selectedIndex = getIndexNum(multiplierValuesList[thisIndex],"byteMultiplyer");
+			getObject("byteOperation").selectedIndex = getIndexNum(arithmaticOp,"byteOperation");
+			getObject("currentValues").selectedIndex = thisIndex;
+			getObject("byteInput").focus();
+			
+		var i = 0;
+			while(getObject("entryCell_"+i)) {
+				getObject("entryCell_"+i).bgColor = "#ff6666";
+			i++;
+			}
+	getObject('entryCell_4').innerHTML = "<span id='editModeText'>EDIT MODE</span>";			
+	flashEditMode("start");	
+	}
+}
+
+function flashEditMode(flashAction) {
+	if(flashAction == "start") {
+		flashText =	setInterval('flashEditModeColor()',500);
+	}else if(flashAction == "stop") {
+		clearInterval(flashText);
+		getObject("editModeText").style.cssText = "display:none; visibility:hidden";
+	}
+}
+
+var editTextColor="#ff0000";
+function flashEditModeColor() {
+	if(editTextColor == "#ff0000"){
+		getObject("editModeText").style.cssText = "color:#ffffff; font-size:25px; font-weight:bold; font-family:Arial; display:block; visibility:visible";
+		editTextColor="#ffffff";
+	}else {
+		getObject("editModeText").style.cssText = "color:#ff0000; font-size:25px; font-weight:bold; font-family:Arial; display:block; visibility:visible";
+		editTextColor="#ff0000";
+	}
+}
+
+function editValue() {
+// NOTE: when hitting edit mode a second time a second time it wont come out of edit mode. edit button is still visible
+// and bg & flash text are still there. Values are added to list instead of editing the current selection
+	if(testData("byteInput", "dataNum") == true && testData("byteInput", "dataEmpty") == true) {
+		var arrayIndexNum = getObject("currentValues").selectedIndex;
+		var thisValue = getObject("byteInput").value;
+		var newByteValue = convertToBt(getObject("byteMultiplyer").value,thisValue);	
+			
+			curValList.splice(arrayIndexNum,1,newByteValue);
+			curValListView.splice(0,curValListView.length);
+			curValOperation.splice(arrayIndexNum,1,getObject("byteOperation").value);
+			prevResults.splice(arrayIndexNum,(prevResults.length - arrayIndexNum) + 1);
+			multiplierValuesList.splice(arrayIndexNum,1,getObject("byteMultiplyer").options[getObject("byteMultiplyer").selectedIndex].text);
+			inputValuesList.splice(arrayIndexNum,1,getObject("byteInput").value);
+			
+			for(var j=getObject("currentValues").length-1;j>=0;j--) {
+						getObject("currentValues").remove(j);
+			}
+			
+			while(prevResults.length != curValOperation.length) {
+				calcTheDamValuesAlready("editMode");
+			}
+			prevResults.pop();
+			
+			displayResults("calc");
+			for(i=0;i<curValList.length;i++) {
+				curValListView.push(curValOperation[i].substring(0,curValOperation[i].indexOf('Bytes',0)) + " " + inputValuesList[i] + " " + multiplierValuesList[i] + " = " + funnelBytes(prevResults[i]))/*prevResults[i] + " Bytes")*/;
+			}
+			
+			createOptionsList("curValListView","currentValues");//updateCurValList();
+			
+			getObject("calcBytesEdit").className = "hide";
+			getObject("calcBytes").className = "show";
+			getObject("cancelCalcEdit").className = "hide";
+			getObject("clearCalcBytes").className = "show";			
+			
+			var i = 0;
+				while(getObject("entryCell_"+i)) {
+					getObject("entryCell_"+i).bgColor = "#FFCC99";
+				i++;
+				}
+			flashEditMode("stop");
+			
+getObject("test1").innerHTML = curValListView;
+getObject("test3").innerHTML = 'addBytes'.substring(0,'addBytes'.indexOf('Bytes',0));
+getObject("test5").innerHTML = curValList;
+getObject("test7").innerHTML = prevResults;
+	}else alert("Please enter a numerical value!");
+}
+
+function cancelCalcBytesEdit() {
+		flashEditMode("stop");
+		magician("calcBytes");
+		magician("calcBytesEdit");
+		magician("clearCalcBytes");
+		magician("cancelCalcEdit");
+		//getObject("calcBytes").className = "show";
+		//getObject("calcBytesEdit").className = "hide";
+		//getObject("clearCalcBytes").className = "show";
+		//getObject("cancelCalcEdit").className = "hide";	
+
+		var thisIndex = getObject("currentValues").length-1;
+		var arithmaticOp = curValOperation[thisIndex].substring(0,curValOperation[thisIndex].indexOf('Bytes',0))
+		
+		getObject("byteInput").value = inputValuesList[inputValuesList.length-1];
+		getObject("byteMultiplyer").selectedIndex = getIndexNum(multiplierValuesList[thisIndex],"byteMultiplyer");
+		getObject("byteOperation").selectedIndex = getIndexNum(arithmaticOp,"byteOperation");
+		getObject("currentValues").selectedIndex = thisIndex;
+		getObject("byteInput").focus();
+
+	var i = 0;
+		while(getObject("entryCell_"+i)) {
+			getObject("entryCell_"+i).bgColor = "#FFCC99";
+		i++;
+		}
+}
+
+
+//******************************************************************//
+//  _____    ,   ,    _____     _____    _____    ___       *******//   
+//  |____    |___|    |___|     |___/    |___     |   \     ******//
+//  _____|   |   |    |   |     |  \     |____    |___/     *****//
+//**************************************************************//
+//*************************************************************//
+//** These are shared ****************************************//
+
+
+
+function useByteConv(tool) {
+	switch(tool) {
+			case "calc":
+				if(curValList.length > 0) {
+					var conversionType = getObject("resultMultiplyer").options[getObject("resultMultiplyer").selectedIndex].value;
+					var convertMe = eval('convertTo' + conversionType);
+						if(conversionType != "Bt") {							
+							var nonNum = /\s/;
+							var returnValue = funnelBytes(prevResults[prevResults.length-1]);
+							var getIndex = returnValue.substring(returnValue.search(nonNum)+1,returnValue.length);
+							var finalVal = returnValue.substring(0,returnValue.search(nonNum));	
+							
+							getObject("convertedResult").innerHTML = convertMe(calcTheDamValuesAlready()).toString(); 
+						}else if(conversionType == "Bt") {
+							getObject("convertedResult").innerHTML = calcTheDamValuesAlready().toString();
+						}else alert("ERROR: \n No such converion found!");
+				}else getObject("convertedResult").innerHTML = ":o) elielC<font color='#cccccc' size='smaller'>reative</font>T<font color='#cccccc' size='smaller'>hreat</font>";
+		break;
+		
+		case "convertTop":
+		
+			if(testData("convInput", "dataNum") == true && testData("convInput", "dataEmpty") == true) {
+				var inputVal = getObject("convInput").value;
+				if(convResultList.length > 0) clearAllValues("convertT");
+				getObject("convInput").value = inputVal;
+				var rawBytes = convertToBt(getObject("convMultiplyer").value,inputVal);
+				conversionType;//var  = getObject("convMultiplyer").options[getObject("convMultiplyer").selectedIndex].value;
+				convertMe;//var  = eval('convertTo' + conversionType);
+				var i = 0;
+					while(i < getObject("convMultiplyer").length) {
+						conversionType = getObject("convMultiplyer").options[i].value;
+						convertMe = eval('convertTo' + conversionType);
+						if(conversionType != "Bt"){ convResultList.push(convertMe(rawBytes) + " " + getObject("convMultiplyer").options[i].text);
+						}else if(conversionType == "Bt") convResultList.push(rawBytes + " " + getObject("convMultiplyer").options[i].text);
+						
+						createOptionsList("convResultList","convertedValues");
+						i++;
+					}
+				getObject("bestConv").innerHTML = "&nbsp;<i>" + funnelBytes(rawBytes) + "</i>&nbsp;&nbsp; -OR- &nbsp;&nbsp;<i>" + roundFunnelBytes(rawBytes) + "</i>";
+			} else alert("Please enter a numerical value!");
+		break;
+		
+		case "convertBot":
+			for(j=0;j<getObject("convMultiplyer").length;j++) {
+				var thisInputValue =eval("conv" + getObject("convMultiplyer").options[j].text + "Input");
+				if(getObject(thisInputValue).value) getObject(thisInputValue).value = "";
+				
+				
+			}
+		break;
+	}
+
+}
+
+function clearAllValues(tool) {
+var deleteOptions;
+	switch (tool) {
+		case "calc":
+				if(curValList.length > 0) curValList.length = 0;
+				if(curValListView.length > 0) curValListView.length = 0;
+				if(curValOperation.length > 0) curValOperation.length = 0;
+				if(prevResults.length > 0) prevResults.length = 0;
+				if(multiplierValuesList.length > 0) multiplierValuesList.length = 0;
+				if(inputValuesList.length > 0) inputValuesList.length = 0;
+		
+				getObject("byteInput").value = "";
+				getObject("byteMultiplyer").selectedIndex = getIndexNum("megaBytes","byteMultiplyer");
+				getObject("byteOperation").selectedIndex = 0;
+				getObject("currentValues").size = 1;
+				getObject("byteInput").focus();
+				getObject("convertedResult").innerHTML = "";
+				
+				deleteOptions = "currentValues";
+
+			break;
+		case "convertT":
+				if(convResultList.length > 0) convResultList.length = 0; 
+				
+				getObject("convInput").value = "";
+				getObject("convInput").focus();
+				getObject("bestConv").innerHTML = "";
+				
+				deleteOptions = "convertedValues";
+			break;
+		case "convertBot":
+				getObject("convBitInput").value = "";
+				getObject("convByteInput").value = "";
+				getObject("convKiloByteInput").value = "";
+				getObject("convMegaByteInput").value = "";
+				getObject("convGigaByteInput").value = "";
+				getObject("convTeraByteInput").value = "";
+			break;
+		default: 
+				alert("The clearAllValues() function was incorrectly called!");
+			break;
+	}
+	
+		if(getObject(deleteOptions).length > 0) {
+			for(var j=getObject(deleteOptions).length-1;j>=0;j--) {
+					getObject(deleteOptions).remove(j);
+					getObject(deleteOptions).size = j;
+		}
+	}
+}
+
+
+
+//
+</script>
+
+</head>
+
+<body onLoad="assignEvents()">
+
+
+
+
+<table width="80%"  border="0" cellspacing="0" cellpadding="0" align="center">
+ <tr>
+    <td class="leftTopTableTopCell">&nbsp;</td>
+    <td rowspan="2" class="headerTableCell"><a href="javascript:magician('calcBytesContainer')" class="headerStyle"><span>&nbsp;&nbsp;Byte Calculator&nbsp;&nbsp;</span></a></td>
+    <td class="rightTopTableTopCell">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="leftTopTableBottomCell">&nbsp;</td>
+    <td class="rightTopTableBottomCell">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFCC" class="botBorder">
+		<div id="calcBytesContainer" class="hide">
+			<table width="100%"  border="0" cellspacing="0" cellpadding="10">			  
+			  <tr>
+				<td rowspan="4" class="leftTableCell" bgcolor="#FFFFCC">&nbsp;</td>
+				<td bgcolor="#FFCC99" id="entryCell_0">Enter numeric value here.<br /><input type="text" name="byteInput" id="byteInput" value="" size="26" /></td>
+				<td bgcolor="#FFCC99" id="entryCell_1"><br /><select name="byteMultiplyer" id="byteMultiplyer">
+				  <option value="bt">Bits</option>
+				  <option value="Bt">Bytes</option>
+				  <option value="Kb">KiloBytes</option>
+				  <option selected value="Mb">MegaBytes</option>
+				  <option value="Gb">GigaBytes</option>
+				  <option value="Tb">TeraBytes</option>
+				</select></td>
+				<td bgcolor="#FFCC99" id="entryCell_2"><br /><select name="byteOperation" id="byteOperation">
+				<option selected value="addBytes">Add</option>
+				<option value="subtractBytes">Subtract</option>
+				</select></td>
+				<td rowspan="3" width="50px" nowrap bgcolor="#6699FF"><br />Current Values:<br /><select name="currentValues" id="currentValues" size="1" class="boxBorder" >
+				</select></td>
+				<td rowspan="2" align="left" valign="bottom" bgcolor="#6699FF"><input type="button" value="Delete" name="dltCurValEntry" onClick="deleteValue()" /></td>
+				<td colspan="2" rowspan="4" class="rightTableCell" bgcolor="#FFFFCC">&nbsp;</td>
+			  </tr>
+			  <tr>
+				<td bgcolor="#FFCC99" id="entryCell_3"><input type="button" value="Edit Now" name="calcBytesEdit" id="calcBytesEdit" onClick="editValue()" class="hide" /><input type="button" value="Submit" name="calcBytes" id="calcBytes" onClick="useByteCalc()" class="show" />&nbsp;<input type="button" value="&nbsp;&nbsp;Clear&nbsp;&nbsp;" name="clearCalcBytes" id="clearCalcBytes" onClick="clearAllValues('calc')" /><input type="button" value="&nbsp;&nbsp;Cancel&nbsp;&nbsp;" name="cancelCalcEdit" id="cancelCalcEdit" onClick="cancelCalcBytesEdit()" class="hide" />
+				</td>
+				<td colspan="2" bgcolor="#FFCC99" id="entryCell_4">&nbsp;</td>
+			  </tr>
+			  <tr>
+				<td align="left" valign="bottom" class="resultsStyle"><span>Results:</span></td>
+				<td align="left" valign="bottom" class="resultsStyle"><div id="convertedResult">&nbsp;</div></td>
+				<td align="left" valign="bottom" class="resultsStyle"><br /><select name="resultMultiplyer" id="resultMultiplyer" onChange="useByteConv('calc')">
+				  <option value="bt">Bits</option>
+				  <option selected value="Bt">Bytes</option>
+				  <option value="Kb">KiloBytes</option>
+				  <option value="Mb">MegaBytes</option>
+				  <option value="Gb">GigaBytes</option>
+				  <option value="Tb">TeraBytes</option>
+				</select></td>
+				<td align="left" valign="top" bgcolor="#6699FF"><input type="button" value="Edit" name="edtCurValEntry" onClick="editMode()" /></td>
+			  </tr>
+			  <tr>
+				<td colspan="5" class="bottomTableCell" bgcolor="#FFFFCC">&nbsp;</td>
+			  </tr>
+			</table>
+		</div>
+	</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			  <tr>
+				<td width="50%" height="100%" align="center"><div id="neck">[ --- ]<br />[ --- ]<br />[ --- ]</div></td>
+				<td width="50%" align="center"><div id="neck">[ --- ]<br />[ --- ]<br />[ --- ]</div></td>
+			  </tr>
+	  </table></td>
+  </tr>
+   <tr>
+    <td align="center" class="leftTopTableTopCell">&nbsp;</td>
+    <td rowspan="2" class="headerTableCell"><a href="javascript:magician('convBytesContainer')" class="headerStyle"><span>&nbsp;&nbsp;Byte Converter&nbsp;&nbsp;</span></a></td>
+    <td class="rightTopTableTopCell">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="leftTopTableBottomCell">&nbsp;</td>
+    <td class="rightTopTableBottomCell">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" bgcolor="#FFFFCC" class="botBorder">
+		<div id="convBytesContainer" class="hide">
+			<table width="100%"  border="0" cellspacing="0" cellpadding="10">			  
+			  <tr>
+				<td rowspan="4" class="leftTableCell" bgcolor="#FFFFCC">&nbsp;</td>
+				<td bgcolor="#FFCC99" id="entryCell_5">Enter numeric value here.<br /><input type="text" name="convInput" id="convInput" value="" size="26" onKeyPress="" /></td>
+				<td bgcolor="#FFCC99" id="entryCell_6"><br /><select name="convMultiplyer" id="convMultiplyer">
+				  <option value="bt">Bits</option>
+				  <option value="Bt">Bytes</option>
+				  <option value="Kb">KiloBytes</option>
+				  <option selected value="Mb">MegaBytes</option>
+				  <option value="Gb">GigaBytes</option>
+				  <option value="Tb">TeraBytes</option>
+				</select></td>
+				<td bgcolor="#FFCC99" id="entryCell_7"><br /><select name="convOperation" id="convOperation" class="hide">
+				<option selected value="addBytes">Add</option>
+				<option value="subtractBytes">Subtract</option>
+				</select></td>
+				<td rowspan="3" width="50px" nowrap bgcolor="#6699FF"><br />Converted Values:<br /><select name="convertedValues" id="convertedValues" size="1" class="boxBorder" disabled />
+				</select></td>
+				<td rowspan="2" align="left" valign="bottom" bgcolor="#6699FF"><input type="button" value="Delete" name="dltCurValEntry" onClick="deleteValue()" class="hide" /></td>
+				<td colspan="2" rowspan="4" class="rightTableCell" bgcolor="#FFFFCC">&nbsp;</td>
+			  </tr>
+			  <tr>
+				<td bgcolor="#FFCC99" id="entryCell_8"><input type="button" value="Edit Now" name="convBytesEdit" id="convBytesEdit" onClick="" class="hide" /><input type="button" value="Submit" name="convBytes" id="convBytes" onClick="useByteConv('convertTop')" class="show" />&nbsp;<input type="button" value="&nbsp;&nbsp;Clear&nbsp;&nbsp;" name="clearConvBytes" id="clearConvBytes" onClick="clearAllValues('convertT')" /><input type="button" value="&nbsp;&nbsp;Cancel&nbsp;&nbsp;" name="cancelConvEdit" id="cancelConvEdit" onClick="" class="hide" />
+				</td>
+				<td colspan="2" bgcolor="#FFCC99" id="entryCell_9">Best Conversion:&nbsp;<span id="bestConv">&nbsp;</span></td>
+			  </tr>
+			  <tr>
+				<td colspan="3" align="left" valign="bottom" class="resultsStyle">
+
+					<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+					  <tr>
+						<td>
+							<span class="hide">
+								C
+								<br />
+								&nbsp;O
+								<br />
+								&nbsp;&nbsp;N
+								<br />
+								&nbsp;&nbsp;&nbsp;V
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;E
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R
+								<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span></td>
+						<td align="center" valign="bottom">&nbsp; Bits &nbsp;</td>
+						<td align="center" valign="bottom">&nbsp; Bytes &nbsp;</td>
+						<td align="center" valign="bottom">&nbsp; KiloBytes &nbsp;</td>
+						<td align="center" valign="bottom">&nbsp; MegaBytes &nbsp;</td>
+						<td align="center" valign="bottom">&nbsp; GigaBytes &nbsp;</td>
+						<td align="center" valign="bottom">&nbsp; TeraBytes &nbsp;</td>
+					  </tr>
+					  <tr>
+						<td align="center" valign="bottom">Clear</td>
+						<td align="center" valign="bottom"><input type="text" name="convBitInput" id="convBitInput" value="" size="10" /></td>
+						<td align="center" valign="bottom"><input type="text" name="convByteInput" id="convByteInput" value="" size="10" /></td>
+						<td align="center" valign="bottom"><input type="text" name="convKiloByteInput" id="convKiloByteInput" value="" size="10" /></td>
+						<td align="center" valign="bottom"><input type="text" name="convMegaByteInput" id="convMegaByteInput" value="" size="10" /></td>
+						<td align="center" valign="bottom"><input type="text" name="convGigaByteInput" id="convGigaByteInput" value="" size="10" /></td>
+						<td align="center" valign="bottom"><input type="text" name="convTeraByteInput" id="convTeraByteInput" value="" size="10" /></td>
+					  </tr>
+					  <tr>
+						<td align="center" valign="top"><input name="convBitInputSend" type="button" value="&nbsp;&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp;"></td>
+						<td align="center" valign="top"><input name="convBitInputSend" type="button" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"></td>
+						<td align="center" valign="top"><input name="convBitInputSend" type="button" value="<&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"></td>
+						<td align="center" valign="top"><input name="convBitInputSend" type="button" value="<&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"></td>
+						<td align="center" valign="top"><input name="convBitInputSend" type="button" value="<&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"></td>
+						<td align="center" valign="top"><input name="convBitInputSend" type="button" value="<&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>"></td>
+						<td align="center" valign="top"><input name="convBitInputSend" type="button" value="<&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></td>
+					  </tr>
+					</table>
+					
+				</td>
+				<td align="left" valign="top" bgcolor="#6699FF"><input type="button" value="Edit" name="edtCurValEntry" onClick="editMode()" class="hide" /></td>
+			  </tr>
+			  <tr>
+				<td colspan="5" class="bottomTableCell" bgcolor="#FFFFCC">&nbsp;</td>
+			  </tr>
+			</table>
+		</div>
+	</td>
+  </tr>
+</table>
+
+<table width="80%" border="1" cellspacing="5" cellpadding="5" style="visibility:hidden; display:none ">
+  <tr>
+    <td>curValListView before</td>
+    <td>curValListView after</td>
+    <td>curValOperation before</td> 
+    <td>curValOperation after</td>
+    <td>curValList before</td>
+    <td>curValList after</td>
+	<td>prevResults before</td>
+	<td>prevResults after</td>
+  </tr>
+  <tr>
+    <td><div id="test0"></div></td>
+    <td><div id="test1"></div></td>
+    <td><div id="test2"></div></td>
+    <td><div id="test3"></div></td>
+    <td><div id="test4"></div></td>
+    <td><div id="test5"></div></td>
+	<td><div id="test6"></div></td>
+	<td><div id="test7"></div></td>
+  </tr>
+</table>
+
+
+</body>
+</html>
